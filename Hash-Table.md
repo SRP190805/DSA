@@ -40,7 +40,7 @@ To keep it simple, let's assume there is at most 10 names in the list, so the ar
 ```python
 my_hash_set = [None,None,None,None,None,None,None,None,None,None]
 
-### Step 2: Storing names using a hash function
+## Step 2: Storing names using a hash function
 
 Now comes the special way we interact with the Hash Set we are making.
 
@@ -74,7 +74,7 @@ After using the hash function to store those names in the correct position, our 
 ```python
 my_hash_set = [None,'Jones',None,'Lisa',None,'Bob',None,'Siri','Pete',None]
 
-### Step 3: Looking up a name using a hash function
+## Step 3: Looking up a name using a hash function
 
 We have now established a super basic Hash Set, because we do not have to check the array element by element anymore to find out if "Pete" is in there, we can just use the hash function to go straight to the right element!
 
@@ -96,7 +96,7 @@ def contains(name):
 
 print("'Pete' is in the Hash Set:",contains('Pete'))
 
-### Step 4: Handling collisions
+## Step 4: Handling collisions
 
 Let's also add "Stuart" to our Hash Set.
 
@@ -122,7 +122,7 @@ my_hash_set = [
     [None]
 ]
 
-### Step 5: Hash Set code example and simulation
+## Step 5: Hash Set code example and simulation
 
 To complete our very basic Hash Set code, let's have functions for adding and searching for names in the Hash Set, which is now a two dimensional array.
 
@@ -163,7 +163,7 @@ print('Contains Stuart:',contains('Stuart'))
 
 #Python
 
-## Uses of Hash Tables
+# Uses of Hash Tables
 
 Hash Tables are great for:
 
@@ -177,7 +177,7 @@ O(n)for search and delete, while Hash Tables have just
 
 O(1)on average! Read more about time complexity here.
 
-## Hash Set vs. Hash Map
+# Hash Set vs. Hash Map
 
 A Hash Table can be a Hash Set or a Hash Map. The table below describes these data structures in more detail:
 
@@ -188,7 +188,7 @@ A Hash Table can be a Hash Set or a Hash Map. The table below describes these da
 | **Is it fast to search, add and delete elements?** | Yes, average O(1).                                                        | Yes, average O(1).                                                        |
 | **Is there a hash function that takes the key, generates a hash code, and that is the bucket where the element is stored?** | Yes                                                                      | Yes                                                                      |
 
-## Hash Tables Summarized
+# Hash Tables Summarized
 
 Hash Table elements are stored in storage containers called buckets.
 
