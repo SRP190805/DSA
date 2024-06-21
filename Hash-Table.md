@@ -5,12 +5,15 @@ Hash Tables are a powerful data structure designed for fast access, insertion, a
 # Why Hash Tables?
 
 **Speed**: Compared to arrays or linked lists, Hash Tables offer significantly faster average-case performance for search, add, and delete operations.
+
 **Direct Access**: Unlike linear search in arrays or linked lists, Hash Tables enable direct access to elements based on a calculated hash code.
 
 # Core Concepts:
 
 **Buckets**: The Hash Table is an array of buckets. Each element in the dataset is stored in a specific bucket.
+
 **Hash Function**: A function that maps an element's value (key) to a unique number (hash code) used to determine the corresponding bucket. Ideally, a good hash function distributes elements evenly across buckets to minimize collisions.
+
 **Collision**: When two elements have the same hash code, they collide and end up in the same bucket. Collision resolution techniques are needed to handle this.
 
 # Operations:
