@@ -34,7 +34,7 @@ Here's an overview of different Binary Tree structures:
 Similar to a Singly Linked List, a Binary Tree can be implemented by creating a structure where each node can link to its left and right child nodes. 
 
 
-## Binary Tree Traversal in Markdown
+## Binary Tree Traversal 
 
 ### Introduction
 
