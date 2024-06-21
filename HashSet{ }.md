@@ -1,5 +1,3 @@
-I'd be glad to create a markdown file explaining Hash Sets:
-
 **Hash Sets**
 
 Hash Sets are a fundamental data structure used for efficient storage and retrieval of elements. They excel in tasks like:
