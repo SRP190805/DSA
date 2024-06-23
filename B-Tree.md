@@ -67,7 +67,6 @@ DFS has three main types, each with a distinct order of visiting nodes:
 
 **Note:** Specific code implementations for these traversals will depend on the chosen programming language. 
 
-###  Creating a Markdown File
 
 While you cannot directly include code within a markdown file, you can represent the code structure using code blocks:
 
