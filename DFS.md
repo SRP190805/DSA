@@ -131,3 +131,65 @@ Running the `inOrderTraversal` function on this BST will print the nodes in asce
 
 This order reflects the in-order visit of each node: first the left subtree (1, 2, 3), then the root (4), and finally the right subtree (6, 7).
 
+## Post-order Traversal of Binary Trees
+
+Post-order traversal is a Depth-First Search (DFS) technique used to visit nodes in a binary tree in a specific order. You can learn more about different types of Binary Tree traversals [here](URL binary tree traversal ON Wikipedia en.wikipedia.org).
+
+### Understanding Post-order Traversal
+
+Post-order traversal follows a **Left-Right-Root** order:
+
+1. Recursively perform post-order traversal on the left subtree.
+2. Recursively perform post-order traversal on the right subtree.
+3. Visit the root node (print its data).
+
+This traversal is called "post" order because the root node is visited **after** its left and right subtrees have been traversed.
+
+### Uses of Post-order Traversal
+
+Post-order traversal has various applications, including:
+
+* **Deleting a Binary Tree:** When deleting a binary tree, it's crucial to delete the child nodes before the root node to avoid memory leaks. Post-order traversal ensures this order by visiting the left and right subtrees before the root.
+* **Evaluating Expression Trees:** In expression trees, where operators are stored as nodes and operands as leaves, post-order traversal helps evaluate the expression correctly. The operands are visited after their corresponding operators, enabling proper calculation.
+
+### Post-order Traversal in Python
+
+Here's an example of post-order traversal implemented in Python:
+
+```python
+def postOrderTraversal(node):
+  if node is None:
+    return
+  postOrderTraversal(node.left)  # Recursively traverse left subtree
+  postOrderTraversal(node.right)  # Recursively traverse right subtree
+  print(node.data, end=", ")  # Visit the root node
+```
+
+**Explanation:**
+
+1. The `postOrderTraversal` function takes a node as input.
+2. If the node is `None` (empty), the function returns (base case).
+3. It recursively calls itself on the `left` child node to perform post-order traversal on the left subtree.
+4. Then, it recursively calls itself on the `right` child node to perform post-order traversal on the right subtree.
+5. Finally, after traversing both subtrees, the function prints the data of the current node (root node).
+
+### Running the Example
+
+Imagine a binary tree with the following structure:
+
+```
+      R
+     / \
+    A   C
+       / \
+      B   D
+```
+
+Running the `postOrderTraversal` function on this tree will print the nodes in the following order:
+
+```
+B, D, A, C, R
+```
+
+This order reflects the post-order visit: first the left subtree (B, D), then the right subtree (A), and finally the root node (R).
+
