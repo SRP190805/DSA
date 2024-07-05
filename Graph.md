@@ -166,3 +166,51 @@ This code defines a `Graph` class with methods for initialization, adding edges 
 The implementations above can be modified to represent directed and weighted graphs. For directed graphs, remove the line that symmetrizes the adjacency matrix. For weighted graphs, modify the `add_edge` method to take a weight argument.
 
 This markdown file covers the basic concepts of graph implementation using adjacency matrices and classes in Python. There's more to explore in graph algorithms and functionalities, but this provides a foundation for understanding how graphs can be represented and manipulated in code.
+
+## Cycles in Graphs
+
+A cycle in a graph is a path that starts and ends at the same vertex, where no edges are repeated. It's similar to walking through a maze and ending up exactly where you started.
+
+**Common Representations of Cycles**
+
+* **Self-loop:** An edge that goes from and to the same vertex. Whether this is considered a cycle depends on the problem you're trying to solve.
+
+**Importance of Cycle Detection**
+
+Detecting cycles in graphs is crucial because they can indicate issues or special conditions in various applications, including:
+
+* Networking
+* Scheduling
+* Circuit design
+
+**Two Primary Methods for Cycle Detection**
+
+1. **Depth-First Search (DFS):**
+    * Explores the graph and marks vertices as visited.
+    * A cycle is detected if the current vertex has an adjacent vertex that has already been visited.
+
+2. **Union-Find:**
+    * Initially defines each vertex as a group or subset.
+    * Groups are joined for every edge.
+    * A cycle is detected whenever a new edge is explored, and two vertices already belong to the same group.
+
+**Implementation Details**
+
+The document delves into the implementation details of cycle detection using both DFS and Union-Find approaches. It includes explanations and Python code examples for each method, along with visualizations to aid understanding.
+
+**Key Considerations**
+
+* **DFS Cycle Detection for Undirected Graphs:**
+    * The code closely resembles the DFS traversal code with slight modifications.
+    * A cycle is found when an adjacent vertex is visited and is not the parent of the current vertex.
+
+* **DFS Cycle Detection for Directed Graphs:**
+    * The algorithm remains similar to undirected graphs, but the code needs adjustments.
+    * In directed graphs, visiting an already visited adjacent vertex doesn't necessarily indicate a cycle.
+    * The code is modified to detect cycles only when a node has been visited earlier in the same path.
+
+* **Union-Find Cycle Detection:**
+    * Operates differently from DFS.
+    * It works by placing each node in its own subset and merging subsets for every edge.
+    * A cycle is identified when the vertices on either side of an edge belong to the same subset (already merged).
+    * This approach is only applicable for undirected graphs.
