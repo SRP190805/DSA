@@ -7,7 +7,6 @@ def SecLargest(nums,size=0):
         if nums[i] > Largest:
             SecLargest = Largest
             Largest = nums[i]
-    for i in range(size):
         if (nums[i] > SecLargest and nums[i] != Largest):
             SecLargest = nums[i]
     print(SecLargest)        
