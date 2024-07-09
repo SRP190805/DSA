@@ -5,9 +5,6 @@ def Duplicates(nums,x,size=0):
     for j in range(size):
         a = nums[j]
         x[a]+=1
-        #if nums[i]!=nums[j]:
-        #    i+=1
-        #    nums[i]=nums[j]
     for j in range(len(x)):
         if x[j]!=0:
             i+=1
