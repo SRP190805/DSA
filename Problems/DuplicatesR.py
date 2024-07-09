@@ -19,5 +19,4 @@ def main():
     a = Duplicates(arr,hash)
     res = [x for x in range(max(arr)+1) if hash[x]!=0]
     print(res)
-    print(arr)
 main()
